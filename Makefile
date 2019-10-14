@@ -1,4 +1,6 @@
 CFLAGS=-g -Wall -Wextra -pipe
+LFLAGS=-pthread
+
 default: test_ring_buffer
 
 test: test_ring_buffer
