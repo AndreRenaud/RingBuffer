@@ -10,7 +10,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: setup
-      run: apt-get update && apt-get -y install cppcheck
+      run: sudo apt-get update && sudo apt-get -y install cppcheck
     - name: make
       run: make
     - name: make test
