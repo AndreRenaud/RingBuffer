@@ -16,8 +16,8 @@ struct ring_buffer {
 	unsigned head;
 	unsigned tail;
 
-	uint64_t bytes_written;
-	uint64_t bytes_read;
+	uint64_t bytes_written;  // Stores the total number of bytes written to the buffer
+	uint64_t bytes_read;     // Stores the total number of bytes read to the buffer
 };
 
 /**
