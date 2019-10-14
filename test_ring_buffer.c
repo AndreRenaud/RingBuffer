@@ -1,4 +1,5 @@
 #include <pthread.h>
+#include <inttypes.h>
 
 #include "acutest.h"
 #include "ring_buffer.h"
@@ -8,7 +9,7 @@ static void ring_buffer_dump(const struct ring_buffer *rb)
 	printf("rb: data_len=%u head=%u tail=%u used=%u free=%u full=%d\n",
 		rb->data_len, rb->head, rb->tail, ring_buffer_used_space(rb), 
 		ring_buffer_free_space(rb), ring_buffer_full(rb));
-	printf("rb: bytes written: %lld bytes read: %lld\n",
+	printf("rb: bytes written: %" PRId64 " bytes read: %" PRId64 "\n",
 		rb->bytes_written, rb->bytes_read);
 }
 
